@@ -1,0 +1,49 @@
+/* Make canvas fill the entire viewport and stay responsive */
+.canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background-color: transparent;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none; /* So you can click through */
+}
+
+/* ✅ Responsiveness for all screen sizes */
+@media (max-width: 1440px) {
+  .canvas {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 1024px) {
+  .canvas {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .canvas {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .canvas {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 320px) {
+  .canvas {
+    width: 100vw;
+    height: 100vh;
+  }
+}

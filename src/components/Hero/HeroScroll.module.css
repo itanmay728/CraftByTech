@@ -1,0 +1,128 @@
+.heroScrollWrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* padding-top: 50px; */
+  /* padding-bottom: 100px; */
+  /* background: #111; */
+  width: 100%;
+}
+
+.heroScrollContainer {
+  height: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  perspective: 1000px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  color: white;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.highlight {
+  color: #ffb300;
+  display: block;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.card {
+  width: 100%;
+  max-width: 80rem;
+  height: clamp(25rem, 60vw, 40rem);
+  background: #222;
+  border: 4px solid #6c6c6c;
+  border-radius: 30px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.cardInner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: #111;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  border-radius: 20px;
+}
+
+/* ================== RESPONSIVENESS ================== */
+
+/* 🖥 Large screens (1440px+) */
+@media (min-width: 1440px) {
+  .heroScrollContainer {
+    height: 80rem;
+  }
+}
+
+/* 💻 Laptops & Tablets */
+@media (max-width: 1024px) {
+  .heroScrollContainer {
+    height: 70rem;
+    padding: 1.5rem;
+  }
+  .card {
+    height: clamp(20rem, 70vw, 35rem);
+  }
+}
+
+/* 📱 Mobiles */
+@media (max-width: 768px) {
+  .heroScrollWrapper {
+    padding-top: 600px;
+    padding-bottom: 200px;
+  }
+
+  .title {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+  }
+
+  .highlight {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+  }
+
+  .card {
+    border-width: 2px;
+    padding: 0.5rem;
+  }
+}
+
+/* ⌚ Smartwatches & Tiny Screens */
+@media (max-width: 300px) {
+  .title {
+    font-size: 0.9rem;
+  }
+
+  .highlight {
+    font-size: 1.4rem;
+  }
+
+  .card {
+    height: 8rem;
+    border-radius: 10px;
+  }
+
+  .cardInner {
+    border-radius: 8px;
+  }
+}

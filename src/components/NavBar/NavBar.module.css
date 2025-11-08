@@ -1,0 +1,298 @@
+/* 🌟 Navbar */
+.navbar {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: 95%;
+  max-width: 1300px;
+  transition: all 0.3s ease;
+}
+
+/* 🧱 Container */
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  border-radius: 1.2rem;
+  padding: 0.6rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* 🖼️ Logo + Brand */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* ✨ Glossy Brand */
+.brand {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff, #9b00ff, #ff0080);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: brandGlow 6s linear infinite;
+  text-shadow: 0 0 20px rgba(0, 200, 255, 0.25);
+  white-space: nowrap;
+}
+
+@keyframes brandGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 🌐 Links */
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.link {
+  color: rgba(49, 49, 49, 0.85);
+  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: capitalize;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  background: linear-gradient(90deg, #00c6ff, #0072ff, #9b00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Active Link */
+.active {
+  background: linear-gradient(90deg, #00c6ff, #ff0080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #00c6ff, #ff0080);
+  animation: activeGlow 2s linear infinite;
+}
+@keyframes activeGlow {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+/* 🍔 Mobile Menu */
+.menuButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+  padding: 0.3rem;
+  transition: transform 0.3s ease;
+}
+.menuButton:hover {
+  transform: scale(1.1);
+}
+
+/* ⚡ Let’s Talk Button */
+.talkButton {
+  position: relative;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.8rem;
+  background: linear-gradient(90deg, #00c6ff, #0072ff, #9b00ff, #ff0080);
+  background-size: 400% 400%;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  animation: glowingBorder 6s linear infinite;
+  box-shadow: 0 0 10px rgba(0, 200, 255, 0.4);
+  flex-shrink: 0;
+}
+.talkButton:hover {
+  transform: scale(1.05);
+}
+@keyframes glowingBorder {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* ✅ RESPONSIVENESS */
+
+/* Tablets & Laptops */
+@media (max-width: 1024px) {
+  .navContainer {
+    padding: 0.6rem 1.2rem;
+  }
+  .links {
+    gap: 1.2rem;
+  }
+}
+
+/* Tablets / Mobiles */
+@media (max-width: 768px) {
+  .navContainer {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.8rem;
+    text-align: center;
+    animation: slideDown 0.3s ease;
+    gap: 0.8rem;
+  }
+
+  .showMenu {
+    display: flex;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .link {
+    padding: 0.4rem 1rem;
+  }
+
+  .talkButton {
+    margin-top: 0.6rem;
+    align-self: center;
+  }
+}
+
+/* Small Mobiles */
+@media (max-width: 480px) {
+  .brand {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+  }
+  .logo {
+    width: 34px;
+    height: 34px;
+  }
+  .navContainer {
+    padding: 0.5rem 1rem;
+  }
+  .link {
+    font-size: 0.9rem;
+  }
+  .talkButton {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* ⚙️ Smartwatches (≤320px width) */
+@media (max-width: 320px) {
+  .navbar {
+    top: 0.1rem;
+    width: 98%;
+  }
+
+  .navContainer {
+    /* flex-direction: column; */
+    align-items: center;
+    padding: 0rem 0.5rem;
+    gap: 0.2rem;
+  }
+
+  .left {
+  gap: 0.3rem;
+  
+}
+
+  .logo {
+    width: 20px;
+    height: 20px;
+  }
+
+  .brand {
+    font-size: 0.4rem;
+    text-align: center;
+  }
+
+  .menuButton {
+    font-size: 10px;
+  }
+
+  .links {
+    width: 100%;
+    margin-top: 0.4rem;
+    margin-bottom: 0.2rem;
+    text-align: center;
+    animation: slideDown 0.3s ease;
+    gap: 0.6rem;
+  }
+
+  .link {
+    font-size: 0.6rem;
+    padding: 0rem 0.3rem;
+  }
+  
+
+  .talkButton {
+    font-size: 0.7rem;
+    padding: 0rem 0.3rem;
+  }
+}
+
+/* Slide-down animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
