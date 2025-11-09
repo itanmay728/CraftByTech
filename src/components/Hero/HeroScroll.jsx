@@ -34,8 +34,8 @@ const HeroScroll = () => {
             className={styles.header}
           >
             <h1 className={styles.title}>
-              Unleash the power of <br />
-              <span className={styles.highlight}>Scroll Animations</span>
+              Crafting Code <br />
+              <span className={styles.highlight}>Smart Software Development</span>
             </h1>
           </motion.div>
 

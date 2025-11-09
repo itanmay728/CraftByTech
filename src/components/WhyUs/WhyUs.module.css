@@ -1,0 +1,255 @@
+/* 🌟 Section Wrapper */
+.whyUsSection {
+  width: 100%;
+  margin-top: 10px;
+  padding: 60px 20px;
+  text-align: center;
+  background: transparent;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.2s ease-out;
+  /* border: 1px solid red; */
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🌈 Heading Wrapper with subtle background */
+.headingWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, rgba(0, 114, 255, 0.05), rgba(155, 0, 255, 0.05));
+  padding: 12px 24px;
+  border-radius: 12px;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+/* 🏷️ Heading */
+.heading {
+  font-size: 25px;
+  font-weight: 600;
+  color: #111;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.fadeUp {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(135deg, #0072ff, #9b00ff, #ff0080);
+  border-radius: 50%;
+  animation: blink 1.2s infinite ease-in-out;
+  flex-shrink: 0;
+}
+
+/* ✨ Animations */
+@keyframes blink {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🧱 Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* 🎴 Feature Card */
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 35px 20px;
+  background: #ffffff00;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+   transition:
+    all 0.3s ease-out,  /* Fast hover scale */
+}
+
+.cardVisible {
+  opacity: 1;
+  transform: translateY(0) scale(1.05);
+}
+
+.cardVisible:hover {
+  transform: scale(1.08);
+}
+
+.cardVisible:active {
+  transform: scale(1);
+}
+
+.card:hover {
+  border-color: #0072ff;
+  box-shadow: 0 10px 25px rgba(0, 114, 255, 0.15);
+}
+
+/* 🔹 Icon */
+.icon {
+  color: #0072ff;
+  font-size: 40px;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.card:hover .icon {
+  color: #00c6ff;
+}
+
+/* 🧩 Title */
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.card:hover .title {
+  color: #0072ff;
+}
+
+/* 📝 Description */
+.description {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+  max-width: 260px;
+}
+
+/* 🌍 RESPONSIVENESS */
+
+/* 💻 Laptops (≤1200px) */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .heading {
+    font-size: 28px;
+  }
+}
+
+/* 📱 Tablets (≤900px) */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .headingWrapper {
+    padding: 10px 20px;
+  }
+
+  .heading {
+    font-size: 26px;
+  }
+
+  .card {
+    padding: 30px 15px;
+  }
+}
+
+/* 📞 Mobiles (≤600px) */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .headingWrapper {
+    padding: 8px 16px;
+  }
+
+  .heading {
+    font-size: 22px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+}
+
+/* ⌚ Smartwatch (≤320px) */
+@media (max-width: 320px) {
+  .whyUsSection {
+    padding: 40px 10px;
+  }
+
+  .headingWrapper {
+    padding: 6px 10px;
+  }
+
+  .heading {
+    font-size: 18px;
+    gap: 5px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .card {
+    padding: 20px 10px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .icon {
+    font-size: 28px;
+  }
+}

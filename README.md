@@ -59,7 +59,7 @@ Any unauthorized use will be considered a violation of copyright and subject to 
 If you’d like to collaborate or learn more about our services, reach out to us:
 
 📩 **Email:** craftbytechh@gmail.com  
-🌍 **Website:** [www.craftbytech.com](https://www.craftbytech.com)  
+🌍 **Website:** [https://craft-by-tech.vercel.app/](https://craft-by-tech.vercel.app/)  
 📍 **Location:** India  
 
 ---

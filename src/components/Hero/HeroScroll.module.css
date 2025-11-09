@@ -6,6 +6,7 @@
   /* padding-bottom: 100px; */
   /* background: #111; */
   width: 100%;
+  
 }
 
 .heroScrollContainer {
@@ -25,7 +26,7 @@
 }
 
 .title {
-  color: white;
+  /* color: black; */
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 600;
   line-height: 1.4;
@@ -35,14 +36,14 @@
   color: #ffb300;
   display: block;
   font-size: clamp(2.5rem, 8vw, 6rem);
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.1;
 }
 
 .card {
   width: 100%;
   max-width: 80rem;
-  height: clamp(25rem, 60vw, 40rem);
+  height: clamp(30rem, 60vw, 35rem);
   background: #222;
   border: 4px solid #6c6c6c;
   border-radius: 30px;
@@ -71,7 +72,7 @@
 /* 🖥 Large screens (1440px+) */
 @media (min-width: 1440px) {
   .heroScrollContainer {
-    height: 80rem;
+    height: 60rem;
   }
 }
 
@@ -89,8 +90,7 @@
 /* 📱 Mobiles */
 @media (max-width: 768px) {
   .heroScrollWrapper {
-    padding-top: 600px;
-    padding-bottom: 200px;
+    height: 60rem;
   }
 
   .title {
