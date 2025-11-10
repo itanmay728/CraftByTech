@@ -1,0 +1,134 @@
+/* === TESTIMONIALS SECTION WRAPPER === */
+.section {
+  width: 100%;
+  padding: 5rem 0;
+  color: var(--text-color, #111);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* === CONTAINER === */
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ==== TITLE WRAPPER (same as ServiceSection) ==== */
+.headingWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, rgba(0, 114, 255, 0.05), rgba(155, 0, 255, 0.05));
+  padding: 12px 24px;
+  border-radius: 12px;
+}
+
+.heading {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 600;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(135deg, #0072ff, #9b00ff, #ff0080);
+  border-radius: 50%;
+  animation: blink 1.2s infinite ease-in-out;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* === SUBTITLE === */
+.subtitle {
+  font-size: 1.125rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* === DARK MODE === */
+.dark .section {
+  background-color: #000;
+  color: #fff;
+}
+
+.dark .subtitle {
+  color: #ccc;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .headingWrapper {
+    padding: 10px 16px;
+    margin-bottom: 1rem;
+  }
+
+  .heading {
+    font-size: 1.4rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 320px) {
+  .heading {
+    font-size: 1.2rem;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+}

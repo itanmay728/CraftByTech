@@ -1,0 +1,276 @@
+.footer {
+  background-color: rgba(249, 250, 251, 0.85); /* 👈 same color but 85% opacity */
+  color: #333;
+  width: 100%;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(207, 207, 207, 0.6); /* lighter border transparency */
+  backdrop-filter: blur(0px); /* subtle blur for frosted-glass look */
+  -webkit-backdrop-filter: blur(0px);
+}
+
+
+/* ---------- Top Section ---------- */
+.topSection {
+  text-align: center;
+  max-width: 1250px;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.logoImg {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.logoText {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #3d56aa;
+  display: flex;
+  gap: 5px;
+}
+
+.letter {
+  display: inline-block;
+  transform: scale(1);      /* ✅ visible & normal size initially */
+  opacity: 1;               /* ✅ never hidden */
+  will-change: transform;
+}
+
+/* apply only when in-view */
+.bumpOnce {
+  animation: bump 0.55s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+/* scale up then settle back */
+@keyframes bump {
+  0%   { transform: scale(1.35);   }
+  50%  { transform: scale(1.70); }
+  100% { transform: scale(1.35);   }
+}
+
+
+.about {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  margin: 0 auto;
+  max-width: 750px;
+}
+
+/* ---------- Navigation Grid ---------- */
+.navGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1250px;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.navColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navTitle {
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: #111;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #666;
+  font-size: 0.95rem;
+  transition: color 0.25s ease;
+}
+
+.navLink:hover {
+  color: #000;
+}
+
+/* ---------- Social Icons ---------- */
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border: 1px dotted #aaa;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  color: #333;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.socials a:hover {
+  transform: translateY(-4px);
+  background: #e11d48;
+  color: #fff;
+  border-color: #e11d48;
+}
+
+/* ---------- Bottom Section ---------- */
+.bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 3rem;
+}
+
+.bottom span {
+  font-weight: 600;
+  color: #e11d48;
+}
+
+.bottom a {
+  color: #e11d48;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.bottom a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Responsiveness ---------- */
+@media (max-width: 1200px) {
+  .navGrid {
+    max-width: 850px;
+  }
+}
+
+@media (max-width: 992px) {
+  .about {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+  .navGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1.5rem;
+  }
+
+  .logoImg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .logoText {
+    font-size: 1.7rem;
+  }
+
+  .about {
+    font-size: 0.9rem;
+  }
+
+  .navGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .navTitle {
+    font-size: 1rem;
+  }
+
+  .socials a {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+  }
+
+  .bottom {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2.5rem 1rem;
+  }
+
+  .logoImg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logoText {
+    font-size: 1.4rem;
+  }
+
+  .about {
+    font-size: 0.85rem;
+  }
+
+  .navGrid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .socials {
+    gap: 0.8rem;
+  }
+
+  .socials a {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+
+  .bottom {
+    font-size: 0.75rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .logoText {
+    font-size: 1.2rem;
+  }
+  .about {
+    font-size: 0.8rem;
+  }
+  .socials a {
+    width: 36px;
+    height: 36px;
+  }
+}

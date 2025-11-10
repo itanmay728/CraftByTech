@@ -1,0 +1,281 @@
+/* === CONTAINER === */
+.container {
+  position: relative;
+  width: 1250px;
+  height: 640px;
+  overflow: hidden;
+  /* background: rgba(240, 240, 240, 0.6); */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  border-radius: 16px;
+  border-radius: 1rem;
+  padding: 1rem 0;
+  transition: height 0.3s ease;
+}
+
+/* === CARD BASE === */
+.card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  padding: 2rem;
+  transition: all 0.5s ease-in-out;
+  clip-path: polygon(50px 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, calc(100% - 50px) 100%, 50px 100%, 0 100%, 0 0);
+  background-color: white;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* === CENTER CARD === */
+.centerCard {
+  z-index: 10;
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+  color: #fff;
+  border-radius: 1rem;
+  transform: scale(1.25);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* === SIDE CARDS === */
+.sideCard {
+  z-index: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  opacity: 0.9;
+}
+
+
+/* === STARS ROW === */
+.starRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.starIcon {
+  font-size: 1.2rem;
+  color: #ffb400;
+  opacity: 0.9;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.starIcon:hover {
+  transform: scale(1.2);
+  color: #ffc93c;
+}
+
+/* Center card gets a gradient effect on stars */
+.centerStars .starIcon {
+  color: #ffc93c;
+  background: linear-gradient(90deg, #ffb400, #ff7b00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.9; }
+}
+
+
+/* === CARD INNER ELEMENTS === */
+.cardImage {
+  margin-bottom: 1rem;
+  height: 3.8rem;
+  width: 3.8rem;
+  object-fit: cover;
+  object-position: top;
+  background: #ddd;
+  box-shadow: 3px 3px 0px rgb(169, 188, 229);
+  border-radius: 50%;
+}
+
+.cardText {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.45;
+  margin-bottom: 1.5rem;
+}
+
+.cardBy {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 2rem;
+  right: 2rem;
+  font-size: 1rem;
+  font-style: italic;
+  color: #666;
+}
+
+.textHighlight {
+  color: #fff;
+}
+
+.textMuted {
+  color: #e5e5e5;
+}
+
+/* === NAVIGATION BUTTONS === */
+.navButtons {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 20;
+}
+
+.navButton {
+  height: 3.5rem;
+  width: 3.5rem;
+  border: 2px solid #ccc;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.navButton:hover {
+  background: var(--primary-color, #333);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* === RESPONSIVENESS === */
+
+/* 🖥️ Large Desktop (1200px–1600px) */
+@media (max-width: 1600px) {
+  .container {
+    height: 650px;
+  }
+  .centerCard {
+    transform: scale(1.35);
+  }
+  .cardText {
+    font-size: 1.25rem;
+  }
+  .cardBy {
+    font-size: 1rem;
+  }
+}
+
+/* 💻 Medium Screens / Laptops (900px–1200px) */
+@media (max-width: 1200px) {
+  .container {
+    height: 640px;
+  }
+  .centerCard {
+    transform: scale(1.4);
+  }
+  .card {
+    padding: 2.2rem;
+  }
+  .cardText {
+    font-size: 1.15rem;
+  }
+  .cardBy {
+    font-size: 0.95rem;
+  }
+}
+
+/* 📱 Tablets (600px–900px) */
+@media (max-width: 900px) {
+  .container {
+    height: 620px;
+  }
+  .centerCard {
+    transform: scale(1.45);
+  }
+  .card {
+    padding: 1.8rem;
+  }
+  .cardText {
+    font-size: 1.05rem;
+  }
+  .cardBy {
+    font-size: 0.9rem;
+  }
+  .navButton {
+    height: 3.2rem;
+    width: 3.2rem;
+  }
+}
+
+/* 📱 Small Tablets / Large Phones (400px–600px) */
+@media (max-width: 600px) {
+  .container {
+    height: 580px;
+  }
+
+  .centerCard {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    transform: translate(-50%, -50%) scale(1.55);
+    border-radius: 1.3rem;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+  }
+
+  .card {
+    border-width: 1px;
+    padding: 1.3rem;
+  }
+
+  .cardImage {
+    height: 3.2rem;
+    width: 3.2rem;
+  }
+
+  .cardText {
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  .cardBy {
+    font-size: 0.9rem;
+  }
+
+  .navButton {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+/* 📱 Extra Small Phones (<400px) — already perfect */
+@media (max-width: 400px) {
+  .container {
+    height: 480px;
+  }
+
+  .centerCard {
+    width: 92%;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+
+  .cardText {
+    font-size: 0.9rem;
+  }
+
+  .cardBy {
+    font-size: 0.75rem;
+  }
+
+  .navButton {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}

@@ -38,15 +38,15 @@
 }
 
 .right span {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 700;
-  color: #00a6f5;
+  color: #565b5f;
   line-height: 1.2;
 }
 
 .right p {
   font-size: 1.1rem;
-  color: #c3c5c6;
+  color: #4b4b4b;
   line-height: 1.6;
   margin-top: 8px;
 }

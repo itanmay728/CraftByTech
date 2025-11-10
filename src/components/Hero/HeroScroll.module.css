@@ -6,7 +6,6 @@
   /* padding-bottom: 100px; */
   /* background: #111; */
   width: 100%;
-  
 }
 
 .heroScrollContainer {
@@ -33,11 +32,14 @@
 }
 
 .highlight {
-  color: #ffb300;
+  /* color: #ffb300; */
   display: block;
   font-size: clamp(2.5rem, 8vw, 6rem);
   font-weight: 600;
   line-height: 1.1;
+  background: linear-gradient(90deg, #0072ff, #00c6ff, #9b00ff, #ff0080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .card {

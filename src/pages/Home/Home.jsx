@@ -3,6 +3,10 @@ import Hero from '../../components/Hero/Hero'
 import HeroScroll from '../../components/Hero/HeroScroll';
 import WhyUs from '../../components/WhyUs/WhyUs';
 import LightningFast from '../../components/LightningFast/LightningFast';
+import Testimonials from '../../components/Testimonials/Testimonials';
+import ServiceSection from '../../components/ServiceSection/ServiceSection';
+import ClientsMarquee from '../../components/ClientsMarquee/ClientsMarquee';
+import ContactForm from '../../components/ContactForm/ContactForm';
 
 const Home = () => {
   return (
@@ -11,7 +15,10 @@ const Home = () => {
         <HeroScroll/>
         <WhyUs/>
         <LightningFast/>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, obcaecati reiciendis esse nihil nam debitis dolorem in soluta asperiores aliquam officia possimus quae non incidunt quibusdam praesentium explicabo error necessitatibus! Ea eligendi ab aliquam consequatur voluptatum. Nulla possimus accusantium, delectus ducimus sit nostrum assumenda, pariatur ex repellendus et, atque voluptates.</p>
+        <ServiceSection/>
+        <Testimonials/>
+        <ContactForm/>
+        <ClientsMarquee/>
     </div>
   )
 }

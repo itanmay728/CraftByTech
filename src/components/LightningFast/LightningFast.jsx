@@ -121,7 +121,7 @@ const LightningFast = () => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <span>It takes 7 days to launch your site.</span>
+        <span>It takes 7 days to launch your project.</span>
         <p>Lightning-fast delivery without compromising quality.</p>
       </motion.div>
     </div>
