@@ -1,0 +1,25 @@
+.home {
+  width: 100%;
+  overflow-x: hidden; /* ✅ Prevent horizontal scroll overflow */
+  scroll-behavior: smooth; /* ✅ Smooth scroll */
+  background-color: var(--page-bg, #fff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Optional spacing control between sections */
+.home > * {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Add consistent vertical rhythm */
+.home section {
+  overflow-x: hidden;
+}
+
+/* Prevent any weird layout shifts */
+* {
+  box-sizing: border-box;
+}
