@@ -2,7 +2,9 @@
   width: 100%;
   overflow-x: hidden; /* ✅ Prevent horizontal scroll overflow */
   scroll-behavior: smooth; /* ✅ Smooth scroll */
-  background-color: var(--page-bg, #fff);
+  background-color: rgba(249, 250, 251, 0.85);
+  backdrop-filter: blur(0px); /* subtle blur for frosted-glass look */
+  -webkit-backdrop-filter: blur(0px);
   display: flex;
   flex-direction: column;
   align-items: center;
