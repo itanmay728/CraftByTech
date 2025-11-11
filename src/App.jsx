@@ -6,6 +6,8 @@ import LayOut from './LayOut'
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Service from './pages/Service/Service'
+import Contact from './pages/Contact/Contact'
 
 const App = () => {
 
@@ -21,6 +23,14 @@ const App = () => {
         { 
             path: "about", 
             element: <About/> 
+        },
+        { 
+            path: "services", 
+            element: <Service/> 
+        },
+        { 
+            path: "contact", 
+            element: <Contact/> 
         },
         
       ],

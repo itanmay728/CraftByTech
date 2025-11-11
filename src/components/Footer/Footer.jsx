@@ -4,9 +4,7 @@ import {
   FaEnvelope,
   FaInstagram,
   FaLinkedin,
-  FaYoutube,
-  FaFacebook,
-  FaXTwitter,
+  FaWhatsapp
 } from "react-icons/fa6";
 import styles from "./Footer.module.css";
 import logo from "../../assets/Image/logo.png";
@@ -125,6 +123,13 @@ const Footer = () => {
           rel="noreferrer"
         >
           <FaLinkedin />
+        </a>
+        <a
+          href="https://wa.me/+918076390223"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaWhatsapp />
         </a>
       </div>
 

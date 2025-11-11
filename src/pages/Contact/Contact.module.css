@@ -1,0 +1,171 @@
+.contactSection {
+  width: 100%;
+  min-height: 100vh;
+  padding: 7rem 1rem 3rem; /* top padding keeps it clear of navbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-sizing: border-box;
+}
+
+/* ===== Page Title ===== */
+.pageTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeIn 0.6s ease forwards;
+  /* background: linear-gradient(90deg, rgba(0, 114, 255, 0.15), rgba(155, 0, 255, 0.15)); */
+  /* border: 1px solid rgba(0, 114, 255, 0.2); */
+  /* backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); */
+  border-radius: 16px;
+  padding: 0.3rem 6rem;
+  display: inline-block;
+  margin-top: 2rem;
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); */
+}
+
+/* Contact heading text */
+.pageTitle h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #111;
+  background: linear-gradient(90deg, #0072ff, #9b00ff, #ff0080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  margin-bottom: 0.6rem;
+}
+
+/* Gradient underline */
+.underline {
+  width: 80px;
+  height: 4px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #0072ff, #9b00ff);
+  border-radius: 5px;
+}
+
+/* ===== Info Section ===== */
+.infoSection {
+  margin-top: 4rem;
+  text-align: center;
+  width: 100%;
+  max-width: 1250px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  color: #333;
+  font-size: 1rem;
+  width: 220px;
+  text-align: center;
+}
+
+.icon {
+  font-size: 1.8rem;
+  color: #0072ff;
+  transition: transform 0.3s ease;
+}
+
+.infoBox:hover .icon {
+  transform: scale(1.1);
+}
+
+/* ===== Social Links ===== */
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.socialLinks a {
+  font-size: 1.4rem;
+  color: #0072ff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socialLinks a:hover {
+  color: #0011ff;
+  transform: scale(1.2);
+}
+
+/* ===== Map ===== */
+.mapContainer {
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 1000px;
+  height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.mapContainer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsiveness ===== */
+@media (max-width: 768px) {
+  .contactSection {
+    padding-top: 6rem;
+  }
+
+  .infoBox {
+    width: 160px;
+  }
+
+  .mapContainer {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageTitle h1 {
+    font-size: 2rem;
+  }
+
+  .mapContainer {
+    height: 250px;
+  }
+}

@@ -95,7 +95,7 @@ export default function Navbar() {
           })}
 
           {/* Let’s Talk Button */}
-          <button className={styles.talkButton}>Let’s Talk</button>
+          <Link to="/contact" className={styles.talkButton}>Let’s Talk</Link>
         </div>
       </div>
     </nav>

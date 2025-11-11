@@ -179,6 +179,7 @@
   animation: glowingBorder 6s linear infinite;
   box-shadow: 0 0 10px rgba(0, 200, 255, 0.4);
   flex-shrink: 0;
+  text-decoration: none;
 }
 .talkButton:hover {
   transform: scale(1.05);
