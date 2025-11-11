@@ -89,9 +89,9 @@ const WhyUs = () => {
       className={`${styles.whyUsSection} ${visible ? styles.visible : ""}`}
     >
       <div className={styles.headingWrapper}>
-        <h2 className={`${styles.heading} ${visible ? styles.fadeUp : ""}`}>
+        <p className={`${styles.heading} ${visible ? styles.fadeUp : ""}`}>
           Why Us <span className={styles.dot}></span>
-        </h2>
+        </p>
       </div>
 
       <div className={styles.grid}>

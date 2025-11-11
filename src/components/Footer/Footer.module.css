@@ -2,7 +2,7 @@
   background-color: rgba(249, 250, 251, 0.85); /* 👈 same color but 85% opacity */
   color: #333;
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -149,6 +149,9 @@
   font-size: 0.9rem;
   color: #555;
   margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .bottom span {

@@ -1,13 +1,27 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import styles from "./ContactForm.module.css";
 import { FiSend, FiPhoneCall, FiGlobe } from "react-icons/fi";
 
 export default function ContactForm() {
   return (
     <section className={styles.section}>
-      <div className={styles.container}>
+      <motion.div
+        className={styles.container}
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
         {/* LEFT SIDE */}
-        <div className={styles.left}>
+        <motion.div
+          className={styles.left}
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           <div className={styles.badge}>
             <FiSend className={styles.badgeIcon} />
             <p>Contact Now</p>
@@ -37,11 +51,16 @@ export default function ContactForm() {
               <p>Available Worldwide</p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* RIGHT SIDE FORM */}
-        <div className={styles.right}>
-          {/* <div className={styles.indicator}></div> */}
+        <motion.div
+          className={styles.right}
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+          viewport={{ once: true }}
+        >
           <form className={styles.form}>
             <input type="text" name="name" placeholder="Name*" required />
             <input type="email" name="email" placeholder="Email*" required />
@@ -56,8 +75,8 @@ export default function ContactForm() {
               Submit Now
             </button>
           </form>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

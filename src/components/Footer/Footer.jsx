@@ -105,7 +105,11 @@ const Footer = () => {
       </div>
 
       <div className={styles.socials}>
-        <a href="mailto:craftbytechh@gmail.com" target="_blank" rel="noreferrer">
+        <a
+          href="mailto:craftbytechh@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaEnvelope />
         </a>
         <a
@@ -122,13 +126,11 @@ const Footer = () => {
         >
           <FaLinkedin />
         </a>
-        
       </div>
 
       <div className={styles.bottom}>
         <p>
-          © {new Date().getFullYear()} All rights reserved —{" "}
-          <span>CraftByTech</span> | Built with ❤️ by{" "}
+          Built with ❤️ by —
           <a
             href="https://iamtanmay-portfolio.vercel.app/"
             target="_blank"
@@ -136,6 +138,17 @@ const Footer = () => {
           >
             Tanmay Kumar
           </a>
+        </p>
+        <p>
+          © {new Date().getFullYear()} All rights reserved —{" "}
+          <a
+            href="https://www.linkedin.com/company/craftbytech/?viewAsMember=true"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>CraftByTech</span>
+          </a>
+          
         </p>
       </div>
     </footer>
