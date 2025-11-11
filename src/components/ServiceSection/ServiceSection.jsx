@@ -7,42 +7,44 @@ import {
   FiPenTool,
   FiCode,
   FiMonitor,
-  FiShare2,
   FiShoppingCart,
 } from "react-icons/fi";
+
+import { FaMobileRetro, FaCloudArrowUp  } from "react-icons/fa6";
 
 const services = [
   {
     icon: <FiSettings />,
     title: "Strategy",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.",
+    desc: "We craft data-driven digital strategies that align with your business goals, helping you reach the right audience, boost engagement, and scale effectively with measurable results.",
   },
   {
-    icon: <FiPenTool />,
-    title: "Branding",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.",
+    icon: <FaCloudArrowUp />,
+    title: "Hosting",
+    desc: "We offer secure, lightning-fast, and reliable hosting solutions with 99.9% uptime — ensuring your website and applications run smoothly around the clock with zero interruptions.",
   },
   {
     icon: <FiCode />,
-    title: "Development",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.",
+    title: "Software Development",
+    desc: "From custom tools to enterprise-grade systems, we build scalable, efficient, and secure software solutions tailored to your business processes and long-term growth.",
   },
   {
     icon: <FiMonitor />,
-    title: "Web Design",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.",
+    title: "Web Development",
+    desc: "We design and develop high-performing, responsive, and SEO-optimized websites that deliver exceptional user experiences and help your brand stand out online.",
   },
   {
-    icon: <FiShare2 />,
-    title: "Social Media",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.",
+    icon: <FaMobileRetro />,
+    title: "App Development",
+    desc: "We create sleek, user-friendly mobile apps for Android and iOS that enhance user engagement, streamline operations, and bring your digital vision to life.",
   },
   {
     icon: <FiShoppingCart />,
     title: "Ecommerce",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.",
+    desc: "We build feature-rich e-Commerce platforms with secure payment gateways, modern design, and seamless shopping experiences to drive your online business success.",
   },
 ];
+
 
 export default function ServiceSection() {
   return (
