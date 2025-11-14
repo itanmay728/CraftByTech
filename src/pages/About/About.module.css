@@ -1,0 +1,99 @@
+/* ===== Section ===== */
+.aboutSection {
+  padding: 70px 20px;
+  /* background: #0d1117; */
+  color: #fff;
+  text-align: center;
+  padding: 7rem 1rem 3rem;
+}
+
+/* ===== Page Title ===== */
+.pageTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeIn 0.6s ease forwards;
+  border-radius: 16px;
+  padding: 0.3rem 6rem;
+  display: inline-block;
+  margin-top: 2rem;
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); */
+}
+
+/* Contact heading text */
+.pageTitle h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #111;
+  background: linear-gradient(90deg, #0072ff, #9b00ff, #ff0080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  margin-bottom: 0.6rem;
+}
+
+/* Gradient underline */
+.underline {
+  width: 80px;
+  height: 4px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #0072ff, #9b00ff);
+  border-radius: 5px;
+}
+
+/* ===== Two Column Layout ===== */
+.row {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Left Image */
+.left {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutImage {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  /* box-shadow: 0 10px 25px rgba(0,0,0,0.4); */
+  object-fit: cover;
+}
+
+/* Right Content */
+.right {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.companyName {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #58a6ff;
+}
+
+.description {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #c9d1d9;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .right {
+    text-align: center;
+  }
+
+  .companyName {
+    font-size: 28px;
+  }
+}

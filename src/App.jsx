@@ -1,11 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
 import LayOut from './LayOut'
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Service from './pages/Service/Service'
 import Contact from './pages/Contact/Contact'
 
@@ -25,7 +24,7 @@ const App = () => {
             element: <About/> 
         },
         { 
-            path: "services", 
+            path: "service", 
             element: <Service/> 
         },
         { 

@@ -4,11 +4,13 @@ import { Outlet } from 'react-router-dom'
 import BouncingBalls from './components/BouncingBalls/BouncingBalls'
 import Footer from './components/Footer/Footer'
 import ChatBot from './components/ChatBot/ChatBot'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 
 const LayOut = () => {
   return (
     <div>
       <ChatBot/>
+      <ScrollToTop/>
       <BouncingBalls/>
         <NavBar/>
         <Outlet/>

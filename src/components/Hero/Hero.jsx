@@ -60,10 +60,10 @@ export default function Hero() {
         </p>
 
         <div className={styles.buttonGroup}>
-          <a className={`${styles.btn} ${styles.btnOutline}`}>
+          <a href="tel:+916202907277" className={`${styles.btn} ${styles.btnOutline}`}>
             Jump on a call <FaPhoneAlt size={16} />
           </a>
-          <Link className={`${styles.btn} ${styles.btnPrimary}`}>
+          <Link to="/service" className={`${styles.btn} ${styles.btnPrimary}`}>
             Services <FiArrowRight size={18} />
           </Link>
         </div>

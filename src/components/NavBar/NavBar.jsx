@@ -78,7 +78,7 @@ export default function Navbar() {
 
         {/* Navigation Links */}
         <div className={`${styles.links} ${isMenuOpen ? styles.showMenu : ""}`}>
-          {["home", "Services", "About", "contact"].map((item) => {
+          {["home", "Service", "About", "contact"].map((item) => {
             const path = item === "home" ? "/" : `/${item.toLowerCase()}`;
             return (
               <Link

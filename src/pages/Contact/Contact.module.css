@@ -16,10 +16,6 @@
   text-align: center;
   margin-bottom: 3rem;
   animation: fadeIn 0.6s ease forwards;
-  /* background: linear-gradient(90deg, rgba(0, 114, 255, 0.15), rgba(155, 0, 255, 0.15)); */
-  /* border: 1px solid rgba(0, 114, 255, 0.2); */
-  /* backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px); */
   border-radius: 16px;
   padding: 0.3rem 6rem;
   display: inline-block;
