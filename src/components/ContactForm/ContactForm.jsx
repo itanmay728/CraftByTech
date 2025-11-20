@@ -12,7 +12,7 @@ export default function ContactForm() {
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
       >
         {/* LEFT SIDE */}
         <motion.div
@@ -20,7 +20,7 @@ export default function ContactForm() {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <div className={styles.badge}>
             <FiSend className={styles.badgeIcon} />
@@ -59,7 +59,7 @@ export default function ContactForm() {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <form className={styles.form}>
             <input type="text" name="name" placeholder="Name*" required />

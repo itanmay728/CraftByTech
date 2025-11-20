@@ -25,7 +25,7 @@ const HeroScroll = () => {
   const translate = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   return (
-    <div>
+    
       <div className={styles.heroScrollWrapper}>
         <div ref={containerRef} className={styles.heroScrollContainer}>
           {/* Title Section */}
@@ -60,7 +60,7 @@ const HeroScroll = () => {
           </motion.div>
         </div>
       </div>
-    </div>
+    
   );
 };
 

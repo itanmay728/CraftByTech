@@ -1,5 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+"use client";
+import React from "react";
 import styles from "./WhyUs.module.css";
+import { motion } from "framer-motion";
 import {
   FaCode,
   FaSmile,
@@ -8,30 +10,10 @@ import {
   FaHeadset,
   FaMoneyBillWave,
   FaBolt,
-  FaUsers ,
+  FaUsers,
 } from "react-icons/fa";
 
 const WhyUs = () => {
-  const sectionRef = useRef(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          // trigger every time user enters the viewport
-          if (entry.isIntersecting) {
-            setVisible(true);
-          } 
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
-
   const features = [
     {
       title: "Best-in-class Work",
@@ -79,35 +61,51 @@ const WhyUs = () => {
       title: "Expert team",
       description:
         "We love what we do — delivering software that makes businesses thrive.",
-      icon: <FaUsers  />,
+      icon: <FaUsers />,
     },
   ];
 
   return (
-    <section
-      ref={sectionRef}
-      className={`${styles.whyUsSection} ${visible ? styles.visible : ""}`}
+    <motion.section
+      className={styles.whyUsSection}
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: false }} // same behavior as observer
     >
       <div className={styles.headingWrapper}>
-        <p className={`${styles.heading} ${visible ? styles.fadeUp : ""}`}>
+        <motion.p
+          className={styles.heading}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: false}}
+        >
           Why Us <span className={styles.dot}></span>
-        </p>
+        </motion.p>
       </div>
 
       <div className={styles.grid}>
         {features.map((feature, index) => (
-          <div
+          <motion.div
             key={index}
-            className={`${styles.card} ${visible ? styles.cardVisible : ""}`}
-            style={{ transitionDelay: `${index * 0.1}s` }}
+            className={styles.card}
+            initial={{ opacity: 0, y: 50, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1.05 }}
+            transition={{
+              duration: 0.4,
+              ease: "easeOut",
+              delay: index * 0.1, // same timing as your CSS
+            }}
+            viewport={{ once: false }}
           >
             <div className={styles.icon}>{feature.icon}</div>
             <h3 className={styles.title}>{feature.title}</h3>
             <p className={styles.description}>{feature.description}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -8,7 +8,7 @@
   width: 100%;
   background: transparent;
   text-align: center;
-  z-index: 2;
+  /* z-index: 2; */
   overflow: hidden;
 }
 

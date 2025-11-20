@@ -55,7 +55,7 @@ export default function ServiceSection() {
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
       >
         <span className={styles.dot}></span>
         <p>Services</p>
@@ -69,7 +69,7 @@ export default function ServiceSection() {
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             <h2 className={styles.mainHeading}>
               We provide a lot of cool services
@@ -89,7 +89,7 @@ export default function ServiceSection() {
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             <div className={styles.grid}>
               {services.map((service, index) => (
